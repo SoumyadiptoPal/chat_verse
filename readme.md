@@ -1,4 +1,4 @@
-# Chat Verse - Frontend
+# Chat Verse
 
 This repository contains the code for Chat Verse, a web-based chat application.
 
