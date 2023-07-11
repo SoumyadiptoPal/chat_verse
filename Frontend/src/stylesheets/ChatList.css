@@ -1,0 +1,26 @@
+.profileItem{
+padding: 10px;
+border-bottom:1px solid rgb(83, 150, 177);
+height: 60px;
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+.profileimg img{
+height: 43px;
+width: 40px;
+object-fit: contain;
+border-radius: 60px;
+margin: 10px;
+}
+.profileimg{
+    margin-right: 5px;
+}
+.addGrp{
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+.addGrp::-webkit-scrollbar{
+    display: none;
+}

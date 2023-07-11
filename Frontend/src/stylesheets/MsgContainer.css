@@ -1,0 +1,65 @@
+body::-webkit-scrollbar{
+    display: none;
+}
+.msgImg{
+    height: 38px;
+width: 38px;
+object-fit: contain;
+border-radius: 50%;
+margin: 10px;
+}
+.left{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: left;
+    margin: 5px;
+}
+.lftText{
+    border: 1px solid  rgb(37, 170, 223);
+    background-color: rgb(174, 238, 238);
+    border-radius: 5px;
+    font-weight: 400;
+    padding: 5px;
+    max-width: 52vw;
+}
+.right{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: right;
+    margin: 5px;
+}
+.rgtText{
+    border: 1px solid  rgb(37, 170, 223);
+    background-color: rgb(174, 238, 238);
+    border-radius: 5px;
+    font-weight: 400;
+    padding: 5px;
+    max-width: 52vw;
+}
+.quill{
+    font-size: larger;
+  }
+.ql-editor{
+    max-height: 14.5vh;
+    overflow-y: scroll;
+    
+}
+.ql-editor::-webkit-scrollbar{
+    display:none;
+}
+.floatingContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .ibtn{
+    border:1px solid black;
+  }
+  .chatImg{
+    max-height: 40vh;
+    object-fit: contain;
+    max-width: 50vw;
+  }
