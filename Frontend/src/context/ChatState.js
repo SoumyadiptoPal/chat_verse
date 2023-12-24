@@ -1,11 +1,11 @@
 import {useState,useEffect} from 'react'
 import ChatContext from './ChatContext'
 import io from "socket.io-client";
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = process.env.REACT_APP_BACKEND_URL;
 var socket, selectedChatCompare;
 socket = io(ENDPOINT);
 const ChatState=(props)=>{
-    const host="http://localhost:5000"
+    const host= process.env.REACT_APP_BACKEND_URL;
     const [user,setUser]=useState({});
     const [results,setResults]=useState([]);
     // const [searchuser,setSearchUser]=useState({});
