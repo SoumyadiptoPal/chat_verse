@@ -1,7 +1,8 @@
+require('dotenv').config()
 const connectToMongo=require('./db');
 const express = require('express');
 var cors = require('cors');
-
+const origin=process.env.FRONTEND_URL;
 connectToMongo();
 const app = express()
 const port = 5000
@@ -21,7 +22,7 @@ const server=app.listen(port, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: origin,
     // credentials: true,
   },
 });
