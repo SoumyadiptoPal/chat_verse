@@ -1,3 +1,5 @@
+require('dotenv').config()
+const mongoose=require('mongoose');
 mongoose.set('strictQuery', false);
 const uri= process.env.DATABASE_URL;
 const connectDB=async()=>{
