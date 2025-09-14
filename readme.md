@@ -50,3 +50,15 @@ Contributions are welcome! If you want to contribute to the project, please foll
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin feature/your-feature-name`
 5. Open a pull request.
+
+## Images
+Computer Interface
+<img width="1365" height="596" alt="image" src="https://github.com/user-attachments/assets/99a68ecc-5b6a-4ab4-bc19-6cea9b458ee5" />
+<img width="1365" height="597" alt="image" src="https://github.com/user-attachments/assets/d4cd926d-f131-4627-9256-6a11d95ffb62" />
+Mobile Interface
+<img width="203" height="445" alt="image" src="https://github.com/user-attachments/assets/b4108f65-ca48-47b5-81a6-5c7d1abcc0a6" />
+<img width="312" height="638" alt="image" src="https://github.com/user-attachments/assets/5a509613-f903-4dc7-ac5e-0470920597b5" />
+<img width="312" height="638" alt="image" src="https://github.com/user-attachments/assets/9b6b1be6-8f13-4be6-b4aa-5dac0f44885a" />
+
+
+
