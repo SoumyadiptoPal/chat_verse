@@ -59,9 +59,9 @@ Computer Interface
 
 Mobile Interface
 
+<img width="312" height="638" alt="image" src="https://github.com/user-attachments/assets/9b6b1be6-8f13-4be6-b4aa-5dac0f44885a" />
 <img width="312" height="638" alt="image" src="https://github.com/user-attachments/assets/b4108f65-ca48-47b5-81a6-5c7d1abcc0a6" />
 <img width="312" height="638" alt="image" src="https://github.com/user-attachments/assets/5a509613-f903-4dc7-ac5e-0470920597b5" />
-<img width="312" height="638" alt="image" src="https://github.com/user-attachments/assets/9b6b1be6-8f13-4be6-b4aa-5dac0f44885a" />
 
 
 
