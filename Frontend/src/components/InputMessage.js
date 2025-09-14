@@ -30,8 +30,8 @@ const InputMessage = () => {
   const [show2, setShow2] = useState(false);
   const quillRef = useRef(null);
   const [file, setFile] = useState(null);
-  const [tagged,setTagged]=useState("");
-  const [show3,setShow3]=useState(false);
+  const [tagged, setTagged] = useState("");
+  const [show3, setShow3] = useState(false);
   useEffect(() => {
     if (quillRef.current) {
       const quill = quillRef.current.getEditor();
@@ -84,7 +84,7 @@ const InputMessage = () => {
     }
   }
 
-  const ShowFile = async(url) => {
+  const ShowFile = async (url) => {
     const quill = quillRef.current.getEditor();
     const type = getFileType();
     var tl = quill.getLength();
@@ -177,13 +177,13 @@ const InputMessage = () => {
     setShow3(false);
     const quill = quillRef.current.getEditor();
     var tl = quill.getLength();
-  var text = '@'+name;
-  var color = 'blue';
-  quill.insertText(tl-1, text, 'color', color);
-  tl = quill.getLength();
-  var color='black'
-  quill.insertText(tl-1, ' ', 'color', color);
-  quill.setSelection(tl+1 , tl+1 );
+    var text = "@" + name;
+    var color = "blue";
+    quill.insertText(tl - 1, text, "color", color);
+    tl = quill.getLength();
+    var color = "black";
+    quill.insertText(tl - 1, " ", "color", color);
+    quill.setSelection(tl + 1, tl + 1);
   };
   return (
     <div>
@@ -209,32 +209,56 @@ const InputMessage = () => {
           </button>
         </Box>
       </Modal>
-      {(selectedchat.users) && <Modal
-            open={show3}
-            onClose={()=>setShow3(false)}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description">
-              <Box sx={style}>
-                <div style={{display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center"}}>
-                  <img src='images/grpicon.jpg' style={{height:"80px", width:"80px", borderRadius:"50%"}}/>
-                <h2>{selectedchat.chatName}</h2>
-                <h3>Participants</h3>
-                <div className="addGrp" style={{margin:"auto"}}>
-                    {selectedchat.users.map((user)=>(
-                        <div className='detail' onClick={()=>{mention(user.name)}}>
-                            <div className='profileimg'>
-                    <img src={user.pic}/>
-                </div>
-                <div style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
-                  <div>{user.name}</div>
-                  <div>{user.email}</div>
+      {selectedchat.users && (
+        <Modal
+          open={show3}
+          onClose={() => setShow3(false)}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src="images/grpicon.jpg"
+                style={{ height: "80px", width: "80px", borderRadius: "50%" }}
+              />
+              <h2>{selectedchat.chatName}</h2>
+              <h3>Participants</h3>
+              <div className="addGrp" style={{ margin: "auto" }}>
+                {selectedchat.users.map((user) => (
+                  <div
+                    className="detail"
+                    onClick={() => {
+                      mention(user.name);
+                    }}
+                  >
+                    <div className="profileimg">
+                      <img src={user.pic} />
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <div>{user.name}</div>
+                      <div>{user.email}</div>
+                    </div>
                   </div>
-                        </div>
-                    ))}
-                </div>
-                </div>
-                </Box>
-        </Modal>}
+                ))}
+              </div>
+            </div>
+          </Box>
+        </Modal>
+      )}
       <ReactQuill
         ref={quillRef}
         theme="snow"
@@ -243,26 +267,24 @@ const InputMessage = () => {
         modules={modules}
       />
 
-      <div style={{ position: "absolute", bottom: "2px" }}>
-        <button className="ibtn" onClick={() => setShow(!show)}>
-          <InsertEmoticonIcon />
-        </button>
-        <button
-          className="ibtn"
-          style={{ border: "1px solid black" }}
-          onClick={()=>setShow3(true)}
-        >
-          <AlternateEmailIcon />
-        </button>
-        <button onClick={() => setShow2(!show2)}>
-          <AddIcon />
-        </button>
-        <button
-          onClick={handleSubmit}
-          style={{ position: "fixed", bottom: "0px", right: "20px" }}
-        >
+      <div className="input-icons">
+        <div className="input-icons">
+          <div className="ibtn" onClick={() => setShow(!show)}>
+            <InsertEmoticonIcon fontSize="small"/>
+          </div>
+          <div
+            className="ibtn"
+            onClick={() => setShow3(true)}
+          >
+            <AlternateEmailIcon fontSize="small"/>
+          </div>
+          <div className="ibtn" onClick={() => setShow2(!show2)}>
+            <AddIcon fontSize="small"/>
+          </div>
+        </div>
+        <div onClick={handleSubmit} className="ibtn-submit">
           <SendIcon color="primary" />
-        </button>
+        </div>
       </div>
     </div>
   );

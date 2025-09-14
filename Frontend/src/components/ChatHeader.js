@@ -2,6 +2,7 @@ import { Avatar,Box, Modal } from '@mui/material'
 import React,{useContext,useState} from 'react'
 import ChatContext from '../context/ChatContext';
 import SearchUsers from './SearchUsers';
+import ArrowBackIosNewSharpIcon from '@mui/icons-material/ArrowBackIosNewSharp';
 const ChatHeader = () => {
     const style = {
         position: 'absolute',
@@ -52,7 +53,7 @@ const ChatHeader = () => {
       }
   return (
     <div className='chatHeadStyle'>
-        <div style={{fontWeight:"bold",color:'white',border:"1px solid blue", padding:"5px"}} onClick={handleClick}>Back</div>
+        <div className='btn-back' onClick={handleClick}><ArrowBackIosNewSharpIcon/></div>
         <div style={{fontWeight:"bold",color:'white'}} >{(selectedchat.isGroupChat)?selectedchat.chatName:getName(selectedchat.users).name}</div>
         <div style={{}} onClick={openModal}>
         <Avatar alt={(selectedchat.isGroupChat)?selectedchat.chatName:getName(selectedchat.users).name} src={(selectedchat.isGroupChat)?'images/grpicon.jpg':getName(selectedchat.users).pic} />

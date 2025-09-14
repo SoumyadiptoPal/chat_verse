@@ -49,7 +49,7 @@ const SearchUsers = ({setOpen1,option,setParticipants,participants}) => {
         searchUsers(stext);
       }
     return (
-        <div style={{width:"30vw"}}>
+        <div style={{width:"30vw", minWidth:"300px"}}>
             <input type="text" className="search" value={stext} onChange={onChange} id="search" name="search" placeholder='Search User....'/><button onClick={handleSubmit} className='btn1'>Search</button>
             {results.map((User)=>
             {

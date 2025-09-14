@@ -14,15 +14,13 @@ function App() {
   return (
       <ChatState>
         <Router>
-          <div>
-          <div>
+          <div style={{height:"100vh"}}>
             <Routes>
             <Route path="/" element={<Login />}/>
             <Route path="/home" element={<Home />}/>
             <Route path="/login" element={<Login />}/>
             <Route path="/signup" element={<Signup />}/>
             </Routes>
-          </div>
           </div>
         </Router>
         </ChatState>

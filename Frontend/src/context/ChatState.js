@@ -21,6 +21,7 @@ const ChatState=(props)=>{
         // eslint-disable-next-line
       }, []);
     const loginUser = async (credentials) => {  
+        console.log(`${host}/api/auth/login`)
         const response = await fetch(`${host}/api/auth/login`, {
             method: 'POST',
             headers: {
@@ -31,20 +32,14 @@ const ChatState=(props)=>{
         const json = await response.json()
         
         if (json.success){
-            // Save the auth token and redirect
-            // window.location.reload();
             localStorage.setItem('token', json.authtoken);
             const userDetails= await getUser("text");
             localStorage.setItem('user',JSON.stringify(userDetails))
-            console.log("Hi",(JSON.parse(localStorage.getItem('user'))));
-            
         }
-
         return json.success;
     }
 
     const RegisterUser = async (credentials) => {
-        console.log("hello",credentials.pic);
         const response = await fetch(`${host}/api/auth/createuser`, {
             method: 'POST',
             headers: {

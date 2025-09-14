@@ -99,29 +99,14 @@ const Signup = () => {
           <h3 style={{ marginLeft: "20px" }}>Please wait....</h3>
         </div>
       )}
-      <div className="cont3">
-        <img src="images/background.jpg" />
-      </div>
+      <div className="cont3">{/* <img src="images/background.jpg" /> */}</div>
       <div className="cont2">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <h3 id="header">Sign up</h3>
-          <p>
-            Already have an account? <Link to="/login">Login</Link>
-          </p>
-        </div>
-        <form>
+        <div id="header">Sign up</div>
+        <p>
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
+        <form id="forms">
           <div className="elements">
-            <label htmlFor="name" className="form-label">
-              Name
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </label>
             <input
               type="text"
               className="form-control"
@@ -129,12 +114,10 @@ const Signup = () => {
               onChange={onChange}
               id="name"
               name="name"
+              placeholder="Enter Name"
             />
           </div>
           <div className="elements">
-            <label htmlFor="email" className="form-label">
-              Email address{" "}
-            </label>
             <input
               type="email"
               className="form-control"
@@ -143,12 +126,10 @@ const Signup = () => {
               id="email"
               name="email"
               aria-describedby="emailHelp"
+              placeholder="Enter Email"
             />
           </div>
           <div className="elements">
-            <label htmlFor="password" className="form-label">
-              Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </label>
             <input
               type="password"
               className="form-control"
@@ -156,6 +137,7 @@ const Signup = () => {
               onChange={onChange}
               name="password"
               id="password"
+              placeholder="Enter Password"
             />
           </div>
           <div className="elements">

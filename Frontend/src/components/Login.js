@@ -63,19 +63,14 @@ const Login = () => {
           <h3 style={{ marginLeft: "20px" }}>Please wait....</h3>
         </div>
       )}
-      <div className="cont3">
-        <img src="images/background.jpg" />
-      </div>
+      <div className="cont3"></div>
       <div className="cont2">
-        <h3 id="header">Login</h3>
+        <div id="header">Login</div>
         <p>
           Don't have an account? <Link to="/signup">Sign Up</Link>
         </p>
         <form onSubmit={handleSubmit} id="forms">
           <div className="elements">
-            <label htmlFor="email" className="form-label">
-              Email address{" "}
-            </label>
             <input
               type="email"
               className="form-control"
@@ -84,12 +79,10 @@ const Login = () => {
               id="email"
               name="email"
               aria-describedby="emailHelp"
+              placeholder="Enter Email"
             />
           </div>
           <div className="elements">
-            <label htmlFor="password" className="form-label">
-              Password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </label>
             <input
               type="password"
               className="form-control"
@@ -97,6 +90,7 @@ const Login = () => {
               onChange={onChange}
               name="password"
               id="password"
+              placeholder="Enter Password"
             />
           </div>
 
